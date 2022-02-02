@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <link
+         rel="stylesheet"
+         href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+         integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+         crossorigin="anonymous"
+         />
+    <title>HTML playground</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.6.5/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.6.5/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.6.5/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.6.5/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.6.5/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.6.5/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.6.5/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.6.5/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.6.5/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.6.5/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+  </head>
+  <body onload="initiate()">
+    <div class="header">
+        <h2>HTML</h2>
+        <img src="https://img.icons8.com/external-photo3ideastudio-flat-photo3ideastudio/64/000000/external-playground-public-service-photo3ideastudio-flat-photo3ideastudio.png"/>
+        <h2>Playground</h2>
+    </div>
+    
+    <div class="under_header">
+        <a href="#" onclick="chooseHtml()">Html</a>
+        <a href="#" onclick="chooseCss()">Css</a>
+        <a href="#" onclick="chooseJs()">Java</a>
+    </div>
+        
+    <div class="editor">
+        <div class="code" id="coding_box">
+            <textarea id="html-code" placeholder="HTML Code" onload="run()"></textarea>
+            <textarea id="css-code" placeholder="CSS Code" onload="run()"></textarea>
+            <textarea id="js-code" placeholder="JS Code" onload="run()"></textarea>
+        </div>
+        <div class="console" id="console_box">
+            <iframe id="output" placeholder="Code Preview"></iframe>
+        </div>
+    </div>    
+
+    <div class="mid_description_wrapper">
+      <div class="mid_description">
+        Help Section
+      </div>
+    </div>
+
+    <div class="info">
+      <div class="section1" id="html_box">
+          <h2> HTML Tips and Guides </h2>
+          <li><a href="https://www.w3schools.com/html/html_basic.asp" target="_blank">HTML Basic</a></li>
+          <li><a href="https://www.w3schools.com/html/html_headings.asp" target="_blank">HTML Headings</a></li>
+          <li><a href="https://www.w3schools.com/html/html_lists.asp" target="_blank">HTML Lists</a></li>
+          <li><a href="https://www.w3schools.com/html/html_classes.asp" target="_blank">HTML class</a></li>
+          <li><a href="https://www.w3schools.com/html/html_id.asp" target="_blank">HTML id</a></li>
+          <li><a href="https://www.w3schools.com/html/html_layout.asp" target="_blank">HTML Layout </a></li>
+          <li><a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">HTML Forms</a></li>
+          <li><a href="https://www.w3schools.com/html/html_basic.asp" target="_blank">HTML Basic</a></li>
+          <li><a href="https://www.w3schools.com/html/html_headings.asp" target="_blank">HTML Headings</a></li>
+          <li><a href="https://www.w3schools.com/html/html_lists.asp" target="_blank">HTML Lists</a></li>
+          <li><a href="https://www.w3schools.com/html/html_classes.asp" target="_blank">HTML class</a></li>
+          <li><a href="https://www.w3schools.com/html/html_id.asp" target="_blank">HTML id</a></li>
+          <li><a href="https://www.w3schools.com/html/html_layout.asp" target="_blank">HTML Layout </a></li>
+          <li><a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">HTML Forms</a></li>
+          
+      </div>
+      <div class="section2" id="css_box">
+          <h2> CSS Tips and Guides </h2>
+          <li><a href="https://www.w3schools.com/html/html_basic.asp" target="_blank">CSS Basic</a></li>
+          <li><a href="https://www.w3schools.com/css/css_colors.asp" target="_blank">CSS Colors</a></li>
+          <li><a href="https://www.w3schools.com/css/css_background.asp" target="_blank">CSS Backgrounds</a></li>
+          <li><a href="https://www.w3schools.com/css/css_dimension.asp" target="_blank">CSS Height-Width</a></li>
+          <li><a href="https://www.w3schools.com/cssref/css3_pr_align-content.asp" target="_blank">CSS align-content </a></li>
+          <li><a href="https://www.w3schools.com/cssref/pr_class_display.asp" target="_blank">CSS display</a></li>
+          <li><a href="https://www.w3schools.com/cssref/pr_font_font.asp" target="_blank">CSS Fonts</a></li>
+          <li><a href="https://www.w3schools.com/cssref/pr_grid.asp" target="_blank">CSS Grid</a></li>
+          <li><a href="https://www.w3schools.com/html/html_basic.asp" target="_blank">CSS Basic</a></li>
+          <li><a href="https://www.w3schools.com/css/css_colors.asp" target="_blank">CSS Colors</a></li>
+          <li><a href="https://www.w3schools.com/css/css_background.asp" target="_blank">CSS Backgrounds</a></li>
+          <li><a href="https://www.w3schools.com/css/css_dimension.asp" target="_blank">CSS Height-Width</a></li>
+          <li><a href="https://www.w3schools.com/cssref/css3_pr_align-content.asp" target="_blank">CSS align-content </a></li>
+          <li><a href="https://www.w3schools.com/cssref/pr_class_display.asp" target="_blank">CSS display</a></li>
+          <li><a href="https://www.w3schools.com/cssref/pr_font_font.asp" target="_blank">CSS Fonts</a></li>
+          <li><a href="https://www.w3schools.com/cssref/pr_grid.asp" target="_blank">CSS Grid</a></li>
+      </div>
+    </div>
+
+    <!-- Footer goes here -->
+    <div class="footer">
+        <h2>this is a footer </h2>
+   </div>
+
+    <script src="myfancs.js"></script> 
+</html>

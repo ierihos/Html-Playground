@@ -1,0 +1,158 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #2a522f;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.header {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #f1f1f1;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    height: 80px;
+
+    color: #2e2e2e;
+  }
+  
+  /* Style the top navigation bar */
+  .under_header {
+    overflow: hidden;
+    background-color: #2e2e2e;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the topnav links */
+  .under_header a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change color on hover */
+  .under_header a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+
+.editor{
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    height: 500px;
+}
+
+textarea{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#coding_box{
+    flex: 1;
+    margin-right: 15px;
+}
+
+#html-code{
+    width: 99%;
+    height: 99%;
+    border-radius: .5rem;
+    padding-left: 10px;
+}
+
+#js-code{
+    width: 99%;
+    height: 99%;
+    display: none;
+    border-radius: .5rem;
+    padding-left: 10px;
+}
+
+#css-code{
+    width: 99%;
+    height: 99%;
+    display: none;
+    border-radius: .5rem;
+    padding-left: 10px;
+}
+
+#console_box{
+    flex: 1;
+    background: white;
+    border-radius: .5rem;
+}
+
+#output{
+    width: 99.5%;
+    height: 100%;
+    border-radius: .5rem;
+}
+
+.mid_description_wrapper{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    background: #2e2e2e;
+    justify-content: center;
+}
+
+.mid_description{
+    color: #f1f1f1;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+li{
+    list-style-type: none;
+    color: #f1f1f1;
+    margin: 8px;
+    
+}
+
+.info a{
+    text-decoration: underline;
+    color: #f1f1f1;
+    font-size: 1.2em;
+}
+
+.info h2{
+    font-size: 1.8em;
+    color: rgb(37, 37, 37);
+    text-shadow: 2px 1px #9b9b9b;
+    font-weight: 800;
+}
+
+.info{
+    text-align: center;
+    display: flex;
+    height:fit-content;
+}
+
+.section1{
+    flex: 1;
+    margin-right: 15px;
+}
+
+.section2{
+    flex: 1;
+    margin-right: 15px;
+}
+
