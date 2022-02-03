@@ -15,7 +15,7 @@ Also, the user will have the option to edit the "help" section by adding or remo
 # Future improvements
 
 - Save Code in Cache
-- Download Code loccaly
+- Download Code localy
 - Multiple users working on the same project
 - Better scaling and responsivness
 
