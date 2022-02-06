@@ -1,7 +1,135 @@
-.footer{
-    text-align: center;
-    margin-top: 200px;
-    height: 150px;
-    background: #333;
-    padding: 1em;
+* {
+    --primary: #2a522f;
+    --light-grey-primary: #2e2e2e;
+
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      scroll-behavior: smooth;
+  }
+
+.footer__container {
+  background-color: var(--light-grey-primary);
+  padding: 2rem 0;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer__logo {
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.footer__links {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__link--wrapper {
+  display: flex;
+}
+
+.footer__link--items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 16px;
+  text-align: left;
+  width: 160px;
+  box-sizing: border-box;
+}
+
+.footer__link--items h2 {
+  margin-bottom: 16px;
+  color: var(--primary);
+}
+
+.footer__link--items a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: 0.3 ease-out;
+}
+
+.footer__link--items p {
+  font-style: italic;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: 0.3 ease-out;
+}
+
+.footer__link--items a:hover {
+  color: var(--primary);
+  transition: 0.3 ease-out;
+}
+
+.social__icon--link {
+  color: #fff;
+  font-size: 24px;
+}
+
+.end-page {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.end-page--wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto 0 auto;
+}
+
+.social__icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+}
+
+.website__rights {
+  color: #fff;
+}
+
+@media screen and (max-width: 740px) {
+  .footer__links {
+    padding-top: 2rem;
+  }
+
+  #footer__logo {
+    margin-bottom: 2rem;
+  }
+
+  .website__rights {
+    margin-bottom: 2rem;
+  }
+
+  .footer__link--wrapper {
+    flex-direction: column;
+  }
+
+  .end-page--wrap {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer__link--items {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+  }
 }
