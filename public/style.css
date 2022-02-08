@@ -56,7 +56,7 @@ img{
     margin-left: 15px;
     margin-right: 15px;
     display: flex;
-    height: 500px;
+    height: 600px;
 }
 
 textarea{
@@ -131,7 +131,14 @@ li{
     text-decoration: underline;
     color: #f1f1f1;
     font-size: 1.2em;
+    
 }
+
+.info a:hover {
+    color: #131313;
+    font-size: 130%;
+    font-weight: bold;
+  }
 
 .info h2{
     font-size: 1.8em;
@@ -155,4 +162,3 @@ li{
     flex: 1;
     margin-right: 15px;
 }
-
