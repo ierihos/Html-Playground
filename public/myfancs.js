@@ -1,8 +1,18 @@
 function initiate() {
     var h = document.getElementById("html-code");
     var c = document.getElementById("css-code");
-    h.value = "<!DOCTYPE html>\n<html>\n<body>\n\t<h1>Hello World!</h1>\n\t<p>This is a paragraph.</p>\n</body>\n</html>";
-    c.value = "h1{\n\tfont-weight: bold;\n\tcolor: green;\n}\n\np{\n\tfont-weight: bold;\n\tfont-size: 22px;\n}";
+    var lsHtml = localStorage.savedHtml;
+    var lsCss = localStorage.savedCSS;
+    if (!lsHtml){
+      h.value = "<!DOCTYPE html>\n<html>\n<body>\n\t<h1>Hello World!</h1>\n\t<p>This is a paragraph.</p>\n</body>\n</html>";
+    }else{
+      h.value = lsHtml;
+    }
+    if (!lsCss){
+      c.value = "h1{\n\tfont-weight: bold;\n\tcolor: green;\n}\n\np{\n\tfont-weight: bold;\n\tfont-size: 22px;\n}";
+    }else{
+      c.value = lsCss;
+    }
     run();
 }
 
@@ -60,6 +70,7 @@ function chooseJs() {
       this.selectionStart =
         this.selectionEnd = start + 1;
     }
+    localStorage.setItem("savedHtml", document.getElementById('html-code').value);
   });
 
   document.getElementById('css-code').addEventListener('keydown', function(e) {
@@ -76,6 +87,7 @@ function chooseJs() {
       this.selectionStart =
         this.selectionEnd = start + 1;
     }
+    localStorage.setItem("savedCSS", document.getElementById('css-code').value);
   });
 
   document.getElementById('js-code').addEventListener('keydown', function(e) {
