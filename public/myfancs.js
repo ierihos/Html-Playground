@@ -70,7 +70,6 @@ function chooseJs() {
       this.selectionStart =
         this.selectionEnd = start + 1;
     }
-    localStorage.setItem("savedHtml", document.getElementById('html-code').value);
   });
 
   document.getElementById('css-code').addEventListener('keydown', function(e) {
@@ -87,7 +86,6 @@ function chooseJs() {
       this.selectionStart =
         this.selectionEnd = start + 1;
     }
-    localStorage.setItem("savedCSS", document.getElementById('css-code').value);
   });
 
   document.getElementById('js-code').addEventListener('keydown', function(e) {
@@ -105,3 +103,16 @@ function chooseJs() {
         this.selectionEnd = start + 1;
     }
   });
+
+  document.getElementById('html-code').addEventListener('keyup', function() {
+    localStorage.setItem("savedHtml", document.getElementById('html-code').value);
+  });
+
+  document.getElementById('css-code').addEventListener('keyup', function() {
+    localStorage.setItem("savedCSS", document.getElementById('css-code').value);
+  });
+
+  // ADD LATER.
+  //document.getElementById('js-code').addEventListener('keyup', function() {
+  //  localStorage.setItem("savedJs", document.getElementById('js-code').value);
+  //});
