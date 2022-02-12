@@ -140,6 +140,10 @@ li{
     font-weight: bold;
   }
 
+  #email{
+    pointer-events: none;
+  }
+
 .info h2{
     font-size: 1.8em;
     color: rgb(37, 37, 37);
