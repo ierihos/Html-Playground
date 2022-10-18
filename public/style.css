@@ -141,7 +141,7 @@ li{
   }
 
   #email{
-    pointer-events: none;
+      text-decoration: none;
   }
 
 .info h2{
